@@ -1,0 +1,21 @@
+test_arm_three_servo_sequence (test_motion_stl.MotionTests) ... ok
+test_go_to_goal_and_odometry (test_motion_stl.MotionTests) ... ok
+test_stl (test_motion_stl.MotionTests) ... ok
+test_banner_status (test_robot_control.TestControl) ... ok
+test_errors_and_timeout (test_robot_control.TestControl) ... ok
+test_feedback_failure_halts_recipe (test_robot_control.TestControl) ... ok
+test_motion_completion (test_robot_control.TestControl) ... ok
+test_motion_failure (test_robot_control.TestControl) ... ok
+test_recipe_preflight (test_robot_control.TestControl) ... ok
+test_shipped_recipes_disabled (test_robot_control.TestControl) ... ok
+test_stop_detection (test_robot_control.TestControl) ... ok
+test_collision_rejected (test_synthesis.SynthesisTests) ... ok
+test_deadline_infeasible (test_synthesis.SynthesisTests) ... ok
+test_ordered_delivery (test_synthesis.SynthesisTests) ... ok
+test_priority_queue (test_synthesis.SynthesisTests) ... ok
+test_unreachable (test_synthesis.SynthesisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.004s
+
+OK

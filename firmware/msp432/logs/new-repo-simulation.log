@@ -1,0 +1,14 @@
+{
+  "completed_in_order": [
+    "medicine-alice",
+    "food-bob",
+    "water-eve"
+  ],
+  "last_position": [
+    0,
+    0
+  ],
+  "collision_count": 0,
+  "steps": 71,
+  "arm_pose_commands": 18
+}

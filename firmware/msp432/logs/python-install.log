@@ -1,0 +1,22 @@
+Obtaining file:///Users/jeffxcal/Documents/Codex/2026-11-06/files-pasted-by-the-user-i/outputs/eecs149-msp432
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Collecting pyserial>=3.5
+  Downloading pyserial-3.5-py2.py3-none-any.whl (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 KB 2.9 MB/s eta 0:00:00
+Building wheels for collected packages: eecs149-msp432
+  Building editable for eecs149-msp432 (pyproject.toml): started
+  Building editable for eecs149-msp432 (pyproject.toml): finished with status 'done'
+  Created wheel for eecs149-msp432: filename=eecs149_msp432-0.2.0-0.editable-py3-none-any.whl size=3210 sha256=6879aaa26656534bd60b158f0d72f44844b69b067f87dfc1fa8ce79fa780a28d
+  Stored in directory: /private/var/folders/4v/bxpdtk114d565mnjtwpqrkb00000gn/T/pip-ephem-wheel-cache-7x30hwc0/wheels/46/d0/a6/a7b2b40f4246d359662af5ef93cb887ab1530f2ad3f8a0027a
+Successfully built eecs149-msp432
+Installing collected packages: pyserial, eecs149-msp432
+Successfully installed eecs149-msp432-0.2.0 pyserial-3.5
+WARNING: You are using pip version 22.0.4; however, version 26.3 is available.
+You should consider upgrading via the '/Users/jeffxcal/Documents/Codex/2026-11-06/files-pasted-by-the-user-i/outputs/eecs149-msp432/.venv/bin/python3 -m pip install --upgrade pip' command.

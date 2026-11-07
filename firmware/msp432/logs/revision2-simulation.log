@@ -1,0 +1,13 @@
+test_arm_three_servo_sequence (test_motion_stl.MotionTests) ... ok
+test_go_to_goal_and_odometry (test_motion_stl.MotionTests) ... ok
+test_stl (test_motion_stl.MotionTests) ... ok
+test_collision_rejected (test_synthesis.SynthesisTests) ... ok
+test_deadline_infeasible (test_synthesis.SynthesisTests) ... ok
+test_ordered_delivery (test_synthesis.SynthesisTests) ... ok
+test_priority_queue (test_synthesis.SynthesisTests) ... ok
+test_unreachable (test_synthesis.SynthesisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+OK

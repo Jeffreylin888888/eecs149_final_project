@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eecs149-msp432"
+version = "0.2.0"
+description = "EECS149 MSP432 motor and arm controls with offline simulation"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+vision = ["opencv-contrib-python>=4.8", "numpy>=1.24"]
+serial = ["pyserial>=3.5"]
+
+[project.scripts]
+eecs149 = "eecs149_robot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["eecs149_robot*"]

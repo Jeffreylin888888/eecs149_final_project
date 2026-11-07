@@ -1,0 +1,18 @@
+{
+  "calibrated": false,
+  "description": "Replace zero move counts after measuring distance and encoder polarity. Validate all five firmware poses and grip feedback range. No arbitrary pose values are provided.",
+  "steps": [
+    {"op":"pose","index":0,"hold_ms":500},
+    {"op":"pose","index":1,"hold_ms":500},
+    {"op":"move","left":0,"right":0,"timeout_ms":5000},
+    {"op":"pose","index":2,"hold_ms":500},
+    {"op":"feedback","channel":2,"min":0,"max":0},
+    {"op":"pose","index":3,"hold_ms":500},
+    {"op":"move","left":0,"right":0,"timeout_ms":5000},
+    {"op":"move","left":0,"right":0,"timeout_ms":5000},
+    {"op":"pose","index":1,"hold_ms":500},
+    {"op":"pose","index":4,"hold_ms":500},
+    {"op":"move","left":0,"right":0,"timeout_ms":5000},
+    {"op":"pose","index":0,"hold_ms":500}
+  ]
+}

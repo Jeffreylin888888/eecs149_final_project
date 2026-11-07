@@ -1,0 +1,92 @@
+Open On-Chip Debugger 0.12.0
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+verify_msp432_target
+Info : XDS110: connected
+Info : XDS110: vid/pid = 0451/bef3
+Info : XDS110: firmware version = 3.0.0.22
+Info : XDS110: hardware version = 0x0028
+Info : XDS110: connected to target via SWD
+Info : XDS110: SWCLK set to 2500 kHz
+Info : clock speed 1000 kHz
+Info : SWD DPIDR 0x2ba01477
+Info : [msp432.cpu] Cortex-M4 r0p1 processor detected
+Info : [msp432.cpu] target has 6 breakpoints, 4 watchpoints
+Info : starting gdb server for msp432.cpu on 3333
+Info : Listening on port 3333 for gdb connections
+0x0020100c: 0000a000 00000044 
+
+0xe0043020: 00040000 
+
+#0 : msp432 at 0x00000000, size 0x00040000, buswidth 0, chipwidth 0
+	#  0: 0x00000000 (0x1000 4kB) not protected
+	#  1: 0x00001000 (0x1000 4kB) not protected
+	#  2: 0x00002000 (0x1000 4kB) not protected
+	#  3: 0x00003000 (0x1000 4kB) not protected
+	#  4: 0x00004000 (0x1000 4kB) not protected
+	#  5: 0x00005000 (0x1000 4kB) not protected
+	#  6: 0x00006000 (0x1000 4kB) not protected
+	#  7: 0x00007000 (0x1000 4kB) not protected
+	#  8: 0x00008000 (0x1000 4kB) not protected
+	#  9: 0x00009000 (0x1000 4kB) not protected
+	# 10: 0x0000a000 (0x1000 4kB) not protected
+	# 11: 0x0000b000 (0x1000 4kB) not protected
+	# 12: 0x0000c000 (0x1000 4kB) not protected
+	# 13: 0x0000d000 (0x1000 4kB) not protected
+	# 14: 0x0000e000 (0x1000 4kB) not protected
+	# 15: 0x0000f000 (0x1000 4kB) not protected
+	# 16: 0x00010000 (0x1000 4kB) not protected
+	# 17: 0x00011000 (0x1000 4kB) not protected
+	# 18: 0x00012000 (0x1000 4kB) not protected
+	# 19: 0x00013000 (0x1000 4kB) not protected
+	# 20: 0x00014000 (0x1000 4kB) not protected
+	# 21: 0x00015000 (0x1000 4kB) not protected
+	# 22: 0x00016000 (0x1000 4kB) not protected
+	# 23: 0x00017000 (0x1000 4kB) not protected
+	# 24: 0x00018000 (0x1000 4kB) not protected
+	# 25: 0x00019000 (0x1000 4kB) not protected
+	# 26: 0x0001a000 (0x1000 4kB) not protected
+	# 27: 0x0001b000 (0x1000 4kB) not protected
+	# 28: 0x0001c000 (0x1000 4kB) not protected
+	# 29: 0x0001d000 (0x1000 4kB) not protected
+	# 30: 0x0001e000 (0x1000 4kB) not protected
+	# 31: 0x0001f000 (0x1000 4kB) not protected
+	# 32: 0x00020000 (0x1000 4kB) not protected
+	# 33: 0x00021000 (0x1000 4kB) not protected
+	# 34: 0x00022000 (0x1000 4kB) not protected
+	# 35: 0x00023000 (0x1000 4kB) not protected
+	# 36: 0x00024000 (0x1000 4kB) not protected
+	# 37: 0x00025000 (0x1000 4kB) not protected
+	# 38: 0x00026000 (0x1000 4kB) not protected
+	# 39: 0x00027000 (0x1000 4kB) not protected
+	# 40: 0x00028000 (0x1000 4kB) not protected
+	# 41: 0x00029000 (0x1000 4kB) not protected
+	# 42: 0x0002a000 (0x1000 4kB) not protected
+	# 43: 0x0002b000 (0x1000 4kB) not protected
+	# 44: 0x0002c000 (0x1000 4kB) not protected
+	# 45: 0x0002d000 (0x1000 4kB) not protected
+	# 46: 0x0002e000 (0x1000 4kB) not protected
+	# 47: 0x0002f000 (0x1000 4kB) not protected
+	# 48: 0x00030000 (0x1000 4kB) not protected
+	# 49: 0x00031000 (0x1000 4kB) not protected
+	# 50: 0x00032000 (0x1000 4kB) not protected
+	# 51: 0x00033000 (0x1000 4kB) not protected
+	# 52: 0x00034000 (0x1000 4kB) not protected
+	# 53: 0x00035000 (0x1000 4kB) not protected
+	# 54: 0x00036000 (0x1000 4kB) not protected
+	# 55: 0x00037000 (0x1000 4kB) not protected
+	# 56: 0x00038000 (0x1000 4kB) not protected
+	# 57: 0x00039000 (0x1000 4kB) not protected
+	# 58: 0x0003a000 (0x1000 4kB) not protected
+	# 59: 0x0003b000 (0x1000 4kB) not protected
+	# 60: 0x0003c000 (0x1000 4kB) not protected
+	# 61: 0x0003d000 (0x1000 4kB) not protected
+	# 62: 0x0003e000 (0x1000 4kB) not protected
+	# 63: 0x0003f000 (0x1000 4kB) not protected
+MSP432P401x Device Rev D
+
+
+Target guard: device=a000 silicon=44 main_flash=262144
+shutdown command invoked
+Info : XDS110: disconnected

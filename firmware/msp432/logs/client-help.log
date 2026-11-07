@@ -1,0 +1,13 @@
+usage: robot_control.py [-h] --port PORT
+                        {status,lab12,pwm,move,servo,pose,recipe} ...
+
+MSP432 serial client. No motion on connection; physical S1 arms each session.
+
+positional arguments:
+  {status,lab12,pwm,move,servo,pose,recipe}
+    lab12               20% forward/backward/left/right, 200 ms each; wheels
+                        lifted
+
+options:
+  -h, --help            show this help message and exit
+  --port PORT           XDS110 application/backchannel serial port

@@ -1,0 +1,27 @@
+Open On-Chip Debugger 0.12.0
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+verify_msp432_target
+Info : XDS110: connected
+Info : XDS110: vid/pid = 0451/bef3
+Info : XDS110: firmware version = 3.0.0.22
+Info : XDS110: hardware version = 0x0028
+Info : XDS110: connected to target via SWD
+Info : XDS110: SWCLK set to 2500 kHz
+Info : clock speed 1000 kHz
+Info : SWD DPIDR 0x2ba01477
+Info : [msp432.cpu] Cortex-M4 r0p1 processor detected
+Info : [msp432.cpu] target has 6 breakpoints, 4 watchpoints
+Info : starting gdb server for msp432.cpu on 3333
+Info : Listening on port 3333 for gdb connections
+Target guard: device=a000 silicon=44 main_flash=262144
+[msp432.cpu] halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x00006f18 msp: 0x20010000
+** Programming Started **
+** Programming Finished **
+** Verify Started **
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+Info : XDS110: disconnected

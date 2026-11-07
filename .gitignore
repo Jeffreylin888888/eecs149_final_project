@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+dist/
+*.egg-info/
+firmware/buckler/_build/
+*.elf
+*.hex
+*.bin
+*.map
+.DS_Store
+
+firmware/msp432/vendor
+firmware/msp432/build/
+firmware/msp432/backups/
+work/
