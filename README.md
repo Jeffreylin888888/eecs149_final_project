@@ -18,6 +18,13 @@ Connecting USB does not automatically start the robot. Motors need the chassis b
 
 `reference/tirslk/` contains unchanged upstream examples and license notices; their original exercise blanks are reference material, not compiled application code. This repository implements the relevant motor/arm behavior in `firmware/msp432/`, not all other labs in the ZIP. The OLED menu is replaced with Mac serial control. Old Buckler firmware and documents are historical only.
 
+## Keyboard teleoperation
+
+Double-click **`Start-Teleop.command`**, or run `.venv/bin/python tools/robot_teleop.py`.
+Click **Enable controls**, press/release board **S1**, then hold **WASD or arrow keys**. Release to stop; **Space/Escape** stops and disarms. Switching away from the panel also stops it. Default speed is 20%. The currently installed firmware works with this panel; no reflash needed.
+
+See [teleop controls and setup](docs/TELEOP.md). Keep the launcher running and use only one serial controller at a time.
+
 ## Build and test
 
 From this repository:

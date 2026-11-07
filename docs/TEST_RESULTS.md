@@ -61,3 +61,11 @@ Also corrected interrupt restoration in the standalone wheel diagnostic after it
 ## Remaining physical validation
 
 Forward/reverse orientation, loaded ground driving, physical S2/bump/heartbeat-stop tests, and calibrated encoder distances remain to be checked before navigation. Arm wiring, regulated supply/current budget, clearances, per-servo pulse calibration, feedback ranges and measured drive counts remain required. Defaults still block uncalibrated arm and closed-loop drive features. No arm motion or full-project navigation is claimed.
+
+## Ten-second run and teleop implementation
+
+Both wheels were commanded together at 20% power for a 10.018-second host interval, then stopped/disarmed without faults. Counts stabilized at left 7169, right 7354 after coasting. The user confirmed the ten-second movement. Evidence: `logs/both-wheels-ten-seconds.json`.
+
+Added local keyboard teleop using the installed control firmware, with key-release zero commands, explicit stop/disarm, browser-focus handling, stale-message rejection, short motor leases, browser timeout, and single-panel ownership. All 30 Python tests pass (`logs/teleop-tests.log`), and the JavaScript fake-DOM keyboard tests pass. The live page opened and connected to XDS110 with the robot initially disarmed. No firmware writes were made for teleop. See `TELEOP.md` for operation and validation limits.
+
+The user physically confirmed teleop key movement and release-to-stop on 2026-11-06. After ending teleop for arm setup, live STATUS showed armed=0, fault=0, left=7116, right=6243, with no encoder overruns.

@@ -1,0 +1,42 @@
+[
+  {
+    "event": "before",
+    "status": {
+      "armed": 1,
+      "fault": 0,
+      "left": 291,
+      "right": 397,
+      "move": 0,
+      "overruns": 0,
+      "settled": 0
+    }
+  },
+  {
+    "event": "stopped",
+    "status": {
+      "armed": 0,
+      "fault": 0,
+      "left": 7118,
+      "right": 7289,
+      "move": 0,
+      "overruns": 0,
+      "settled": 0
+    }
+  },
+  {
+    "elapsed_seconds": 10.018,
+    "short_lease_commands": 64
+  },
+  {
+    "event": "after_coast",
+    "status": {
+      "armed": 0,
+      "fault": 0,
+      "left": 7169,
+      "right": 7354,
+      "move": 0,
+      "overruns": 0,
+      "settled": 0
+    }
+  }
+]

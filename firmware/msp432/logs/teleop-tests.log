@@ -1,0 +1,35 @@
+test_arm_three_servo_sequence (test_motion_stl.MotionTests) ... ok
+test_go_to_goal_and_odometry (test_motion_stl.MotionTests) ... ok
+test_stl (test_motion_stl.MotionTests) ... ok
+test_banner_status (test_robot_control.TestControl) ... ok
+test_errors_and_timeout (test_robot_control.TestControl) ... ok
+test_feedback_failure_halts_recipe (test_robot_control.TestControl) ... ok
+test_motion_completion (test_robot_control.TestControl) ... ok
+test_motion_failure (test_robot_control.TestControl) ... ok
+test_recipe_preflight (test_robot_control.TestControl) ... ok
+test_shipped_recipes_disabled (test_robot_control.TestControl) ... ok
+test_stop_detection (test_robot_control.TestControl) ... ok
+test_collision_rejected (test_synthesis.SynthesisTests) ... ok
+test_deadline_infeasible (test_synthesis.SynthesisTests) ... ok
+test_ordered_delivery (test_synthesis.SynthesisTests) ... ok
+test_priority_queue (test_synthesis.SynthesisTests) ... ok
+test_unreachable (test_synthesis.SynthesisTests) ... ok
+test_bad_body_rejected (test_teleop.HTTPTests) ... ok
+test_cross_origin_token_and_host_guards (test_teleop.HTTPTests) ... ok
+test_page_and_status (test_teleop.HTTPTests) ... ok
+test_browser_loss_disarms (test_teleop.Tests) ... ok
+test_expiry_during_serial_call_does_not_enable (test_teleop.Tests) ... ok
+test_hardware_fault_disarms (test_teleop.Tests) ... ok
+test_invalid_vector_stops (test_teleop.Tests) ... ok
+test_no_motion_before_physical_arm (test_teleop.Tests) ... ok
+test_old_generation_discarded (test_teleop.Tests) ... ok
+test_other_panel_cannot_take_over (test_teleop.Tests) ... ok
+test_serial_failure_disarms_no_auto_reconnect (test_teleop.Tests) ... ok
+test_speed_bounds (test_teleop.Tests) ... ok
+test_stale_motion_after_stop_rejected (test_teleop.Tests) ... ok
+test_vectors_release_and_stop (test_teleop.Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.045s
+
+OK
