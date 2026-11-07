@@ -1,6 +1,7 @@
 #include "board.h"
 #include <assert.h>
 #include <stdio.h>
+uint32_t mock_irq_mask;
 port p1,p2,p3,p4,p5;
 timer ta0;
 static void stopped(void) {
@@ -34,6 +35,8 @@ int main(void) {
     }
     p4.IN=BUMPS;
     motor_stop(); motor_stop(); stopped();
+    mock_irq_mask=1; assert(motor_run(true)); assert(mock_irq_mask==1); motor_stop();
+    mock_irq_mask=0; assert(motor_run(true)); assert(mock_irq_mask==0); motor_stop();
     assert(motor_set(-25,20,60));
     assert((p5.OUT&MOTOR_DIR)==BIT4);
     assert(ta0.CCR[4]==750 && ta0.CCR[3]==600);

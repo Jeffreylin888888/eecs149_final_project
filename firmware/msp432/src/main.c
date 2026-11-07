@@ -80,13 +80,13 @@ int main(void) {
                 if (late_stop) {
                     d.state = ABORTED;
                     abort_reason |= late_stop;
-                    __enable_irq();
                 } else if (motor_run(d.state == LEFT_RUN)) {
                     motor_runs_started |= d.state == LEFT_RUN ? 1u : 2u;
                 } else {
                     d.state = ABORTED;
                     abort_reason |= 0x200u | motor_stop_inputs();
                 }
+                __enable_irq();
             }
         }
         /* RGB: red=inhibited/aborted, green=ready, blue=sequence, cyan=done.

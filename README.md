@@ -1,6 +1,6 @@
 # EECS149 MSP432 motor and robot-arm repository
 
-Standalone MSP432P401R / TI-RSLK MAX firmware, based on the Lab12_Motors and RobotArm examples linked from TI's `sekp166.pdf`. The Mac builds and offline tests pass. **The new firmware has not been flashed or physically tested.** Earlier LED programming/blinking succeeded; earlier wheel firmware produced no confirmed movement.
+Standalone MSP432P401R / TI-RSLK MAX firmware, based on the Lab12_Motors and RobotArm examples linked from TI's `sekp166.pdf`. The Mac builds and offline tests pass. **Control firmware is flashed and verified; both wheels turned individually and stopped, physically confirmed by the user on 2026-11-06.** LED programming/blinking was previously confirmed. Arm operation remains uncalibrated and untested.
 
 Connecting USB does not automatically start the robot. Motors need the chassis battery supply. Arm operation needs a verified servo supply, wiring and measured pulse limits. The application starts disarmed and requires a fresh S1 press/release with a live host connection. S2, any bump, host timeout, and reset stop outputs.
 
@@ -33,7 +33,7 @@ Requires Arm GNU Embedded GCC, OpenOCD, Python 3.10+, and TI SimpleLink MSP432P4
 
 Build outputs: `firmware/msp432/build/{led,wheels,control}.elf` and `.bin`. **Never flash `control-fixture.elf`: its calibration is synthetic test data.** The upload helper only accepts the three real targets.
 
-## Next hardware session
+## Repeat a wheel test
 
 Keep chassis power off while checking mounting and connections. Remove the LaunchPad 5V jumper before chassis mounting; verify aligned sockets, common ground, supply polarity, and loose wires. Use the confirmed six 1.2 V NiMH cells; support wheels clear of the surface and keep servos disconnected for wheel testing.
 
@@ -43,7 +43,7 @@ After target/overwrite confirmation and physical checks, upload with:
 bash tools/flash_msp432.sh control --confirmed-target-and-overwrite --confirmed-chassis-safe-wheels-lifted
 ```
 
-This backs up main flash twice, compares the copies, verifies device identity, programs only the required flash sectors and verifies the new image. It replaces the previous application. No upload was performed while preparing this repository.
+This backs up main flash twice, compares the copies, verifies device identity, programs only the required flash sectors and verifies the new image. It replaces the previous application. The control image was uploaded and verified during the 2026-11-06 reconnect session.
 
 Install the optional serial dependency in a virtual environment, then list ports:
 
@@ -62,7 +62,7 @@ Use the XDS110 application/backchannel port (not its auxiliary data port):
 .venv/bin/python tools/robot_control.py --port /dev/cu.YOUR_XDS110_PORT lab12
 ```
 
-Each motion command asks for physical S1 arming. Blue RGB = disarmed, green = armed, red = fault. Direction, power and motor response must be observed before ground driving. `status` reports raw encoder counts and fault bits. See [control protocol and calibration](docs/CONTROL.md).
+Each motion command asks for physical S1 arming. Blue RGB = disarmed, green = armed, red = fault. Both motor responses and stopping are confirmed with wheels lifted. Forward/reverse direction and loaded driving still need observation before ground driving. `status` reports raw encoder counts and fault bits. See [control protocol and calibration](docs/CONTROL.md).
 
 ## Arm and closed-loop drive
 

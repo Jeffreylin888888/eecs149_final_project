@@ -1,0 +1,74 @@
+[
+  {
+    "event": "armed",
+    "status": {
+      "armed": 1,
+      "fault": 0,
+      "left": 0,
+      "right": 0,
+      "move": 0,
+      "overruns": 0,
+      "settled": 0
+    }
+  },
+  {
+    "event": "left_before",
+    "status": {
+      "armed": 1,
+      "fault": 0,
+      "left": 0,
+      "right": 0,
+      "move": 0,
+      "overruns": 0,
+      "settled": 0
+    }
+  },
+  {
+    "event": "left_after",
+    "status": {
+      "armed": 1,
+      "fault": 0,
+      "left": 242,
+      "right": 0,
+      "move": 0,
+      "overruns": 0,
+      "settled": 0
+    }
+  },
+  {
+    "event": "right_before",
+    "status": {
+      "armed": 1,
+      "fault": 0,
+      "left": 242,
+      "right": 0,
+      "move": 0,
+      "overruns": 0,
+      "settled": 0
+    }
+  },
+  {
+    "event": "right_after",
+    "status": {
+      "armed": 1,
+      "fault": 0,
+      "left": 242,
+      "right": 258,
+      "move": 0,
+      "overruns": 0,
+      "settled": 0
+    }
+  },
+  {
+    "event": "stopped",
+    "status": {
+      "armed": 0,
+      "fault": 0,
+      "left": 242,
+      "right": 260,
+      "move": 0,
+      "overruns": 0,
+      "settled": 0
+    }
+  }
+]

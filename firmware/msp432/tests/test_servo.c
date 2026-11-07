@@ -1,6 +1,7 @@
 #include "control/servo.h"
 #include <assert.h>
 #include <stdio.h>
+uint32_t mock_irq_mask;
 port p1,p2,p3,p4,p5;
 timer ta0;
 Timer_A_Type ta1,ta2;

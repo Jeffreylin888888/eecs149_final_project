@@ -12,7 +12,7 @@
 | Host CLI | `--help` succeeds; pyserial 3.5 and editable package installed in repository `.venv` |
 | Python syntax / shell syntax | `compileall` and per-script `bash -n` pass |
 | Control ELF link | No undefined symbols reported by `arm-none-eabi-nm -u` |
-| New firmware flash / real motion | **Not attempted** while robot disconnected |
+| Control firmware flash / real wheel motion | **Verified upload, matching readback; both wheels turned/stopped, user confirmed** |
 
 Memory usage from `arm-none-eabi-size` (bytes):
 
@@ -37,8 +37,27 @@ Native tests cover release/press/release debounce, startup stop recovery, active
 
 Earlier detailed notes are preserved under `docs/history/`. This file supersedes their stale implementation-status statements.
 
+## Successful reconnect and powered wheel test
+
+On 2026-11-06 the connected probe reported XDS110 firmware 3.0.0.32, serial M4321005; target remained A000 / silicon 44 / 256 KiB. Current application differed from all repository images. Full main flash was saved, and the user explicitly authorized replacing it while confirming wheels lifted, 5V jumper removed and servos disconnected.
+
+`logs/flash-control-20261106-164106.log` reports **Verified OK**. Two full backup reads compared before programming. The serial application port is `/dev/cu.usbmodemM43210051`; 9600-baud STATUS worked with zero faults.
+
+After a physical S1 press/release, host sent `PWM 20 0 250`, paused, then `PWM 0 20 250`, and STOP. `logs/reconnect-wheel-session.json` records:
+
+| Observation | Left encoder | Right encoder | Fault |
+|---|---:|---:|---:|
+| Before test | 0 | 0 | 0 |
+| After left pulse | 242 | 0 | 0 |
+| After right pulse | 242 | 258 | 0 |
+| Final stopped/disarmed | 242 | 260 | 0 |
+
+No encoder overruns occurred. The user explicitly confirmed: **“Yes—both turned and stopped.”** This establishes the individual wheel-motion milestone. Encoder counts alone were not used as a substitute for that confirmation.
+
+Final read-only inspection: P3.OUT=0x09 (both motor sleep bits low), P2.SEL0=0 (motor PWM disconnected), TA0.CTL=0 (motor timer stopped). The full 6028-byte control image readback exactly matched the compiled binary. Evidence: `logs/control-after-test.log`.
+
+Also corrected interrupt restoration in the standalone wheel diagnostic after its motor-start critical section. Added native interrupt-mask preservation assertions; all five C test programs pass (`logs/reconnect-build.log`). The successful physical session used the separate control target, not that standalone wheel diagnostic.
+
 ## Remaining physical validation
 
-Reconnect with chassis power off for target/upload checks after confirming the intended overwrite. Then verify the previously confirmed mounting/5V jumper, battery condition, supported wheels and disconnected servos before powered testing. Observe each wheel independently, direction, encoder response, S2/bump stop, heartbeat loss and reset behavior. A successful build is not evidence of movement.
-
-Arm wiring, regulated supply/current budget, mechanical clearances, per-servo pulse calibration, feedback ranges and measured drive counts remain required. Defaults intentionally block those unverified features. The new repository completes the software port and offline tests; it does not establish plug-and-play hardware operation or full-project navigation.
+Forward/reverse orientation, loaded ground driving, physical S2/bump/heartbeat-stop tests, and calibrated encoder distances remain to be checked before navigation. Arm wiring, regulated supply/current budget, clearances, per-servo pulse calibration, feedback ranges and measured drive counts remain required. Defaults still block uncalibrated arm and closed-loop drive features. No arm motion or full-project navigation is claimed.

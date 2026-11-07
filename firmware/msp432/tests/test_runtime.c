@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
+uint32_t mock_irq_mask;
 port p1,p2,p3,p4,p5;
 timer ta0;
 static unsigned motor_stops, servo_stops, servo_calls;

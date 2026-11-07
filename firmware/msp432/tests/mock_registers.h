@@ -21,8 +21,8 @@ extern timer ta0;
 #define TIMER_A_CTL_SSEL__SMCLK 0x0200u
 #define TIMER_A_CTL_MC__UP 0x0010u
 #define TIMER_A_CTL_CLR 0x0004u
-#define __disable_irq() ((void)0)
-#define __enable_irq() ((void)0)
-
-#define __get_PRIMASK() 0u
-#define __set_PRIMASK(x) ((void)(x))
+extern uint32_t mock_irq_mask;
+#define __disable_irq() (mock_irq_mask=1u)
+#define __enable_irq() (mock_irq_mask=0u)
+#define __get_PRIMASK() mock_irq_mask
+#define __set_PRIMASK(x) (mock_irq_mask=(x))

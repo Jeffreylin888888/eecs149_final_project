@@ -1,6 +1,6 @@
 # MSP432 / TI-RSLK MAX hardware setup
 
-Current status: user disconnected the robot after a wheel test produced no movement. The new control firmware was prepared offline. Earlier target identification, LED flash/readback and visible blink succeeded. The user previously confirmed mounting, 5V jumper removal, supported wheels and six 1.2 V rechargeable NiMH AA cells. Arm assembly, servo power, wiring and physical limits have not been verified. Do not use Buckler binaries.
+Current status: on 2026-11-06 the user reconnected and powered the robot, confirmed both wheels lifted, 5V jumper removed and servos disconnected, and authorized the control-firmware overwrite. Upload and readback verified. After S1 arming, left and right wheels each ran at 20% for 250 ms; the user confirmed both turned and stopped. The robot was left disarmed with sleep/PWM outputs disabled. Battery previously confirmed as six 1.2 V rechargeable NiMH AA cells. Arm supply/wiring/calibration remain unverified. Do not use Buckler binaries.
 
 ## Verified documentation mapping
 
