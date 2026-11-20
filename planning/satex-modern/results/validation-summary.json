@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-20",
+  "python": "3.12.12",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "tests_passed": 120,
+  "dependencies": {
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "z3-solver": "4.16.0.0",
+    "matplotlib": "3.11.2",
+    "pytest": "9.2.0",
+    "ruff": "0.17.6"
+  },
+  "checks": {
+    "ruff_lint": "pass",
+    "ruff_format": "pass",
+    "wheel_build": "pass",
+    "wheel_third_party_notice": "present",
+    "locked_environment_sync": "pass",
+    "html_javascript_syntax": "pass for all six viewers",
+    "browser_playback": "not verified: browser tool blocks local file URLs"
+  },
+  "scenarios": [
+    {
+      "scenario": "reach-avoid",
+      "horizon": 8,
+      "mode": "finite",
+      "valid": true,
+      "max_dynamics_residual": 1.5543122344752192e-15
+    },
+    {
+      "scenario": "patrol",
+      "horizon": 12,
+      "mode": "lasso",
+      "valid": true,
+      "max_dynamics_residual": 7.771561172376096e-16
+    },
+    {
+      "scenario": "crossing",
+      "horizon": 8,
+      "mode": "finite",
+      "valid": true,
+      "max_dynamics_residual": 4.440892098500626e-16
+    },
+    {
+      "scenario": "team",
+      "horizon": 12,
+      "mode": "lasso",
+      "valid": true,
+      "max_dynamics_residual": 2.220446049250313e-15
+    },
+    {
+      "scenario": "3d",
+      "horizon": 8,
+      "mode": "finite",
+      "valid": true,
+      "max_dynamics_residual": 2.498001805406602e-16
+    },
+    {
+      "scenario": "legacy",
+      "horizon": 12,
+      "mode": "finite",
+      "valid": true,
+      "max_dynamics_residual": 8.881784197001252e-16
+    }
+  ],
+  "benchmark_runs": 30,
+  "all_benchmark_runs_valid": true,
+  "source_archive": {
+    "url": "https://yshoukry.bitbucket.io/SatEX/SatEX.zip",
+    "sha256": "d5b8c33b31019b60b71ac5a6f1c5b5e5c471895e741b9741147874c95b35aa77"
+  }
+}

@@ -1,0 +1,5 @@
+"""Support ``python -m satex`` as well as the installed CLI entry point."""
+
+from .cli import main
+
+raise SystemExit(main())
