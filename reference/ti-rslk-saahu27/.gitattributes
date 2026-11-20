@@ -1,0 +1,2 @@
+# Preserve the recorded upstream bytes, including original line endings.
+* -text

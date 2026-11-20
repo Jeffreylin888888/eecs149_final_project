@@ -1,0 +1,7 @@
+# Local CCS state and generated output are not part of the snapshot.
+.jxbrowser.userdata/
+.metadata/
+RemoteSystemsTempFiles/
+**/Debug/
+**/Release/
+**/.launches/

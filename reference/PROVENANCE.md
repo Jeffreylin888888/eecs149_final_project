@@ -24,3 +24,9 @@ The ZIP contains Lab12_Motors and RobotArm directories, not a separate arm Git r
 | OLED menu | replaced with UART command/status client; no OLED required |
 
 All `src/` paths above are under `firmware/msp432/`. Original 99% duty/long-running exercises and preset servo arrays are not used as safe defaults. Old non-MAX board jumper-cutting instructions in the reference sources do not apply to this MAX chassis. This is a functional port, not a claim that every project in the archive was completed or tested.
+
+## Additional GitHub fork snapshot
+
+The requested [saahu27/TI-RSLK repository](https://github.com/saahu27/TI-RSLK/tree/aba15495d8057eb3378c277bf707a7cabdfb3c03/tirslk_max_1_00_00/tirslk_max_1_00_00) is imported separately under [ti-rslk-saahu27/](ti-rslk-saahu27/UPSTREAM.md), pinned to commit `aba15495d8057eb3378c277bf707a7cabdfb3c03`. It adds 52 lab/example projects and their shared source, CCS metadata, documentation, and supplied object dependencies.
+
+The [manifest](ti-rslk-saahu27/MANIFEST.json) records the size and SHA-256 of each retained upstream file. The [import guide](ti-rslk-saahu27/UPSTREAM.md) describes excluded workspace/build state, external CCS dependencies, per-file license terms, and differences from the original selected references above. This import does not change the active firmware build or replace the original archive snapshot.
