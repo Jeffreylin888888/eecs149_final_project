@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['c',['C',['../odometry_8h.html#ac4cf4b2ab929bd23951a8676eeac086b',1,'odometry.h']]],
+  ['callbackcccd',['callBackCCCD',['../struct_notify_characteristics.html#a0ffcd234e119a923b0c883af0ef13fe9',1,'NotifyCharacteristics']]],
+  ['callbackread',['callBackRead',['../structcharacteristics.html#a33bc0b4eedb2b08c3d6f53f44756a054',1,'characteristics']]],
+  ['callbackwrite',['callBackWrite',['../structcharacteristics.html#a6cf2fd02f740bb22a21862fd9dc02a6b',1,'characteristics']]],
+  ['cccdhandle',['CCCDhandle',['../struct_notify_characteristics.html#a04a97eb06c60abd55246d8c75900be79',1,'NotifyCharacteristics']]],
+  ['cccdvalue',['CCCDvalue',['../struct_notify_characteristics.html#a80e24ab149b63fd9180ce2b9cc53e78e',1,'NotifyCharacteristics']]],
+  ['centerconvert',['CenterConvert',['../_i_r_distance_8h.html#ad3ba9e2ae552250cfe976068777227a4',1,'IRDistance.c']]],
+  ['characteristics',['characteristics',['../structcharacteristics.html',1,'']]],
+  ['checkgoal',['CheckGoal',['../odometry_8h.html#ab7c3f2212f4dd0a6a17dca002ed7478d',1,'odometry.c']]],
+  ['clearmrdy',['ClearMRDY',['../_g_p_i_o_8h.html#a18a92d4c00d8048436ff0ead58bab501',1,'GPIO.h']]],
+  ['clearreset',['ClearReset',['../_g_p_i_o_8h.html#ae462f4edaec1b2049180f5dec996399e',1,'GPIO.h']]],
+  ['clock_2eh',['Clock.h',['../_clock_8h.html',1,'']]],
+  ['clock_5fdelay1ms',['Clock_Delay1ms',['../_clock_8h.html#a975183291bc39bd04257c1458ecc4521',1,'Clock.c']]],
+  ['clock_5fdelay1us',['Clock_Delay1us',['../_clock_8h.html#ac04076eda7102f291926b439cc713176',1,'Clock.c']]],
+  ['clock_5fgetfreq',['Clock_GetFreq',['../_clock_8h.html#a9cba0654b940955562e7154f6b6c58f6',1,'Clock.c']]],
+  ['clock_5finit48mhz',['Clock_Init48MHz',['../_clock_8h.html#a6af2755c894e5587fbc63a8a6ad084db',1,'Clock.c']]],
+  ['contrast',['CONTRAST',['../_nokia5110_8h.html#aeabfeed30bb698227790861c934a2151',1,'Nokia5110.h']]],
+  ['cortexm_2eh',['CortexM.h',['../_cortex_m_8h.html',1,'']]],
+  ['cr',['CR',['../_e_u_s_c_i_a0_8h.html#a876ce77f3c672c7162658151e648389e',1,'CR():&#160;EUSCIA0.h'],['../_u_a_r_t0_8h.html#a876ce77f3c672c7162658151e648389e',1,'CR():&#160;UART0.h'],['../_u_a_r_t1_8h.html#a876ce77f3c672c7162658151e648389e',1,'CR():&#160;UART1.h']]]
+];

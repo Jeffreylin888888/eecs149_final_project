@@ -78,3 +78,9 @@ Defaults deliberately disable servo output, ADC feedback, and encoder-controlled
 After verified physical calibration, rebuild/reflash and use `servo CHANNEL MICROSECONDS`, `pose INDEX`, `move LEFT_TICKS RIGHT_TICKS TIMEOUT_MS`, or `recipe config/wave.json` / `recipe config/pick-drop-return.json`. Recipes remain disabled until their measured parameters and `calibrated` flag are set. Successful pulse completion is not proof of joint motion or a grasp; the pick/drop recipe also checks a measured grip-feedback range.
 
 See [test evidence](docs/TEST_RESULTS.md), [hardware setup](docs/HARDWARE_SETUP.md), and [upstream provenance](reference/PROVENANCE.md). LED source: `firmware/msp432/src/main.c` with `WHEEL_TEST=0`.
+
+## Additional TI-RSLK lab projects
+
+The [saahu27/TI-RSLK reference snapshot](reference/ti-rslk-saahu27/UPSTREAM.md) adds 52 lab and example projects alongside this repository's robot application. It includes the fork's completed motor-driver exercises, CCS project files, shared libraries, and upstream documentation, pinned to commit `aba15495d8057eb3378c277bf707a7cabdfb3c03`.
+
+Open the [import guide](reference/ti-rslk-saahu27/UPSTREAM.md) for CCS setup, licensing, and the exact import scope. These are upstream reference projects; the active firmware remains under `firmware/msp432/`. The original selected references remain under `reference/tirslk/`.
