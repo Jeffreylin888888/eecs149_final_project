@@ -1,0 +1,33 @@
+name: Motion planner tests
+on:
+  push:
+    paths:
+      - 'planning/satex-modern/**'
+      - '.github/workflows/motion-planner.yml'
+  pull_request:
+    paths:
+      - 'planning/satex-modern/**'
+      - '.github/workflows/motion-planner.yml'
+permissions:
+  contents: read
+jobs:
+  planner:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    defaults:
+      run:
+        working-directory: planning/satex-modern
+    env:
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: uv sync --locked --extra dev --python "${{ matrix.python-version }}"
+      - run: uv run --no-sync pytest -q
+      - run: uv run --no-sync ruff check src tests
+      - run: uv run --no-sync ruff format --check src tests
+      - run: uv build --wheel

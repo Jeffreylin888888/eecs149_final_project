@@ -1,0 +1,10 @@
+{
+  "valid": true,
+  "errors": [],
+  "tolerance": 1e-06,
+  "max_dynamics_residual": 2.498001805406602e-16,
+  "max_loop_residual": 0.0,
+  "min_sampled_separation": null,
+  "ltl_satisfied": true,
+  "safety_scope": "sampled discrete-time states; no inter-sample guarantee"
+}

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "satex-modern"
+version = "0.1.0"
+description = "LTL motion planning with Z3, HiGHS and conflict-driven convex feasibility"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0,<3", "scipy>=1.14,<2", "z3-solver>=4.13,<5", "matplotlib>=3.9,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9"]
+
+[project.scripts]
+satex = "satex.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/satex"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"THIRD_PARTY_NOTICES.md" = "satex/THIRD_PARTY_NOTICES.md"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["satex"]

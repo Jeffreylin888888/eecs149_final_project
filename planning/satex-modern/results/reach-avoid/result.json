@@ -1,0 +1,139 @@
+{
+  "status": "sat",
+  "horizon": 8,
+  "mode": "finite",
+  "loop_start": null,
+  "states": {
+    "r1": [
+      [
+        1.0,
+        -0.0,
+        1.0,
+        -0.0
+      ],
+      [
+        0.5,
+        -1.0,
+        1.2571428571428573,
+        0.5142857142857147
+      ],
+      [
+        -0.0,
+        -0.0,
+        1.7714285714285705,
+        0.5142857142857147
+      ],
+      [
+        0.5,
+        1.0,
+        2.285714285714285,
+        0.5142857142857147
+      ],
+      [
+        2.0,
+        2.0,
+        2.8,
+        0.5142857142857147
+      ],
+      [
+        3.5,
+        1.0,
+        3.057142857142857,
+        -0.0
+      ],
+      [
+        4.0,
+        -0.0,
+        3.057142857142857,
+        -0.0
+      ],
+      [
+        4.0,
+        -0.0,
+        3.057142857142857,
+        -0.0
+      ]
+    ]
+  },
+  "controls": {
+    "r1": [
+      [
+        -1.0,
+        0.5142857142857147
+      ],
+      [
+        1.0,
+        -0.0
+      ],
+      [
+        1.0,
+        -0.0
+      ],
+      [
+        1.0,
+        -0.0
+      ],
+      [
+        -1.0,
+        -0.5142857142857147
+      ],
+      [
+        -1.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0
+      ]
+    ]
+  },
+  "control_dimensions": {
+    "r1": 2
+  },
+  "regions": {
+    "r1": [
+      "start",
+      "start",
+      "start",
+      "start",
+      "start",
+      "bridge",
+      "goal",
+      "bridge"
+    ]
+  },
+  "stats": {
+    "backend": "smc",
+    "strategy": "deletion",
+    "iterations": 10,
+    "lp_calls": 92,
+    "conflicts": 9,
+    "conflict_sizes": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3
+    ],
+    "build_seconds": 0.005058749986346811,
+    "elapsed": 0.069569582992699,
+    "message": "",
+    "continuous_variables": 60,
+    "guarded_groups": 56,
+    "control_effort_l1": 7.0285714285714285
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "tolerance": 1e-06,
+    "max_dynamics_residual": 1.5543122344752192e-15,
+    "max_loop_residual": 0.0,
+    "min_sampled_separation": null,
+    "ltl_satisfied": true,
+    "safety_scope": "sampled discrete-time states; no inter-sample guarantee"
+  }
+}
